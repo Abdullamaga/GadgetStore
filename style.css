@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 header {
@@ -12,7 +12,9 @@ header {
 }
 
 .header-inner {
-  max-width: 1110px;
+  box-sizing: border-box;
+  max-width: 1130px;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,6 +54,19 @@ header {
   font-size: 128px;
 }
 
+@media screen and (max-width: 950px) {
+  .intro-title {
+    font-size: 100px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .intro-title {
+    font-size: 64px;
+  }
+
+}
+
 .intro-arrow {
   width: 40px;
   height: 40px;
@@ -63,7 +78,7 @@ header {
   transition: 1s transform;
 }
 
-.intro-arrow:hover{
+.intro-arrow:hover {
   transform: translateY(20px) rotate(45deg);
 }
 
@@ -81,8 +96,25 @@ header {
   padding: 20px;
 }
 
+@media screen and (max-width: 800px) {
+  .cart-modal {
+    max-width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cart-modal-order-sum {
+    margin-top: 30px;
+    display: flex;
+    width: 200px;
+    align-self: flex-start;
+  }
+
+}
+
 .cart-modal-products {
-  max-width: 65%;
+  max-width: 500px;
   width: 100%;
   max-height: 500px;
   overflow-y: scroll;
@@ -144,7 +176,7 @@ header {
   transition: .2s background-color;
 }
 
-.cart-modal-product-btn:hover{
+.cart-modal-product-btn:hover {
   background-color: rgb(179, 20, 52);
 
 }
@@ -155,6 +187,12 @@ header {
   align-self: flex-start;
   width: 25%;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 800px) {
+  .cart-modal-order {
+    width: 100%;
+  }
 }
 
 .cart-modal-order-sum {
@@ -173,7 +211,7 @@ header {
   transition: .2s background-color;
 }
 
-.cart-modal-order-btn:hover{
+.cart-modal-order-btn:hover {
   background-color: rgb(30, 80, 209);
 
 }
@@ -255,7 +293,7 @@ header {
   justify-content: center;
 }
 
-footer{
+footer {
   margin-top: 150px;
   text-align: center;
   background-color: #333333;
